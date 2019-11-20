@@ -33,7 +33,7 @@
               // Display the Login successful Message...
               $error = alertSuccess('Login Successful.');
               
-              header("Location: https://localhost/php//clientmanager//home.php");
+              header("Location: ./home.php");
           }
           else{
               $error = alertInfo('Invalid Id or password combination.');
