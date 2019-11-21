@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+      
+      <div id="errorPanel"></div>
+  
+      <div class="jumbotron">
+          <div class="text-center">
+              <h1 class="display-4">Temperature Converter.</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 mt-3">
+                          <div class="form-group">
+                            <input type="number" class="form-control pt-4 pb-4" id="numberField" placeholder="Enter Temperature in Numbers e.g 41" onkeypress="checkForEnter(event)">
+                          </div>    
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div><!-- End of Row -->
+                </div><!-- End of Container -->
+              
+              <div class="btn-group btn-group-toggle mt-3" data-toggle="buttons" onclick="onButtonClick()">
+              <label class="btn btn-success btn-lg pr-4 pl-4 active">
+                <input type="radio" name="options" id="celciusBtn" autocomplete="off" checked> Celcius
+              </label>
+              <label class="btn btn-success btn-lg pr-4 pl-4">
+                <input type="radio" name="options" id="farengeightBtn" autocomplete="off"> Fahrenheit
+              </label>
+            </div>
+          </div>
+      </div>
+      
+
+      <div class="container">
+          
+          <div class="row">
+              <div class="col-6">
+                  <div class="text-center">
+                      <h1 class="display-2 text-muted"><span id="cVal">100</span><sup>o</sup></h1>
+                      <p class="lead">Celcius</p>
+                  </div>  
+              </div>
+              <div class="col-6">
+                  <div class="text-center">
+                    <h1 class="display-2 text-muted"><span id="fVal">212</span><sup>o</sup></h1>
+                    <p class="lead">Fahrenheit</p>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+
+    <!-- Optional JavaScript -->
+      <script type="text/javascript">
+          
+          function checkForEnter(e){
+              // Check for either Enter key is perssed
+              if( e.keyCode == 13 ){
+                  // If pressed then call the method onButtonClick()
+                  onButtonClick();
+                  
+              }
+          }
+          
+          function toCeicius(f){
+              return ((f - 32) / 9) * 5; 
+          }
+          
+          function toFahrenheit(c){
+              return ((9 * c) / 5) + 32;
+          }
+          
+          function getErrorAlert(message){
+              let msg = "<div class='alert alert-danger mb-0 alert-dismissible fade show' role='alert'>"+message+"<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>"
+              return msg;
+          }
+          
+          
+          function onButtonClick(){
+              let celciusBtn = document.getElementById('celciusBtn');
+              let numValue = document.getElementById('numberField').value;
+              let cValReference = document.getElementById('cVal');
+              let fValReference = document.getElementById('fVal');
+              
+              
+              if( numValue == ""){
+                  let eMessage = getErrorAlert('Please Enter Temperature.');
+                  document.getElementById('errorPanel').innerHTML = eMessage ;
+                  return;   // No Execution Further.
+              }
+              
+              // Type cast it to Number Datatype.
+              numValue = Number(numValue);
+              
+              if ( celciusBtn.checked ){
+                  // Render the Fields.
+                  fValReference.innerHTML = toFahrenheit(numValue).toFixed(1);
+                  cValReference.innerHTML = numValue.toFixed(1);
+                  return;
+              }else{
+                  /// Ender the Fields.
+                  cValReference.innerHTML = toCeicius(numValue).toFixed(1);
+                  fValReference.innerHTML = numValue.toFixed(1);
+              }
+              
+          }
+      </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
