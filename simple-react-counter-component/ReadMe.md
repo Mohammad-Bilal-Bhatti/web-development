@@ -15,10 +15,10 @@ This is just a basic component for the testing purpose.
 ## UI - user interfaces
 
 Adding Counter.
-![Add Counter Component](imgs/ss1.png "Adding Counter by clicking the add Button")
+![Add Counter Component](./imgs/ss1.PNG "Adding Counter by clicking the add Button")
 Counters Added.
-![Counters Added](imgs/ss2.png "Counters Component Added to the UI")
+![Counters Added](./imgs/ss2.PNG "Counters Component Added to the UI")
 Changing the state of Counter.
-![Changing the state of the components](imgs/ss3.png "Changing the value of the counter")
+![Changing the state of the components](./imgs/ss3.PNG "Changing the value of the counter")
 Deleting the Counter.
-![Deleting the Counter Component](imgs/ss4.png "Deleting the counter component by clicking delete button")
+![Deleting the Counter Component](./imgs/ss4.PNG "Deleting the counter component by clicking delete button")
