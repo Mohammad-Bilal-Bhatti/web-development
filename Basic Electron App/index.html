@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Electron App</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="text-center">
+				<div class="display-3">Welcome to <strong class="text-info">Electron</strong>.js</div>
+			</div>
+		</div>
+
+		<div class="container mb-4">
+			<div class="text-center">
+				<button onclick="showAlert()" class="btn btn-outline-success btn-lg m-2">Show Alert</button>
+				<a href="./home.html" class="btn btn-outline-primary btn-lg m-2" role='button'>Click me</a>
+			</div>
+		</div>
+
+
+		<div id="alertBox">
+			
+		</div>
+
+
+	</body>
+
+
+
+	<!-- Jqyery then Bootstrap -->
+	<script type="text/javascript" src="./scripts/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+
+
+		function showAlert(){
+			const alert = `		
+				<div id='malert' class='alert alert-info alert-dismissible fade show' role='alert'>
+				  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+				  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+				    <span aria-hidden='true'>&times;</span>
+				  </button>
+				</div>
+				`;
+				const box = document.getElementById('alertBox');
+				box.innerHTML = alert;
+
+		}
+
+
+	</script>
+
+</html>
