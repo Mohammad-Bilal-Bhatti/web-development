@@ -37,6 +37,6 @@ Designed and implemented just to exprement with react how it works in short due 
 ### User Interfaces:
 ![stopwatch screenshot](./img/stopwatch.PNG "Stopwatch Started")
 
-![adding new stopwatch](./img/addnew.png "Adding new stopwatch")
+![adding new stopwatch](./img/addnew.PNG "Adding new stopwatch")
 
-![removing stopwatch screenshot](./img/addone.png "Removing stoptwatch")
+![removing stopwatch screenshot](./img/addone.PNG "Removing stoptwatch")
