@@ -1,13 +1,26 @@
 # Title
+Simple Stopwatch Component
 
-Stopwatch | React | Javascript
-
+> Tags: Javascript | React | Component | Stopwatch
 
 
 ### Description
-A simple react stopwatch component with basic functionalities like starting and stopping.
+A simple react stopwatch component. Mimic functionality of stopwatch. Simple flat UI which provides easiness. UI provides three[3] visible elements: Timer Panel, Start/Stop Button, and Reset button.  
 
-> Tags: Javascript | React | Component | Stopwatch
+
+### Technologies Used
+- Javascript
+- HTML
+- Bootstrap
+- React
+
+### Motivation
+Designed and implemented just to exprement with react how it works in short due to learning purpose.
+
+### Future Work
+- Refactoring
+- Theme selection functionality.
+- Increase Responsiveness.
 
 ### Functionalities
 - Add Timer
@@ -16,14 +29,14 @@ A simple react stopwatch component with basic functionalities like starting and 
 - Reset Timer
 - Delete Timer
 
+### How to use?
+- Clone this repository.
+- Download Dependencies. _> npm install
+- Start Project. _> npm start  
+
 ### User Interfaces:
+![stopwatch screenshot](./img/stopwatch.PNG "Stopwatch Started")
 
+![adding new stopwatch](./img/addnew.png "Adding new stopwatch")
 
-Start timer
-![alt-text](./img/stopwatch.PNG "hover-text")
-
-Adding new components
-![alt-text](./img/addnew.png "hover-text")
-
-Deleting component
-![alt-text](./img/addone.png "hover-text")
+![removing stopwatch screenshot](./img/addone.png "Removing stoptwatch")
